@@ -1,0 +1,4 @@
+URxvt.keysym.Control-Up:	\033OA
+URxvt.keysym.Control-Left:	\033OD
+URxvt.keysym.Control-Down:	\033OB
+URxvt.keysym.Control-Right:	\033OC

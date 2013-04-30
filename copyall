@@ -1,0 +1,14 @@
+#!/bin/sh
+
+HOME=/home/bh
+
+cp .Xresources		$HOME/.Xresources
+cp .bashrc		$HOME/.bashrc
+cp .conkyrc		$HOME/.conkyrc
+cp .profile		$HOME/.profile
+cp .vimrc		$HOME/.vimrc
+cp .xsession		$HOME/.xsession
+cp rc.conf		/etc/rc.conf
+cp ttys			/etc/ttys
+cp xmonad.hs		$HOME/.xmonad/xmonad.hs
+cp xorg.conf		/etc/X11/xorg.conf
