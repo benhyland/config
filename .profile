@@ -13,11 +13,13 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$HO
 # serial line.
 # TERM=xterm; 	export TERM
 
-BLOCKSIZE=K;	export BLOCKSIZE
-EDITOR=vim;   	export EDITOR
-PAGER=more;  	export PAGER
+BLOCKSIZE=K;			export BLOCKSIZE
+EDITOR=vim;			export EDITOR
+VISUAL=vim;			export VISUAL
+PAGER=less;			export PAGER
 JAVA_HOME=/usr/local/openjdk7;	export JAVA_HOME
-LC_ALL=en_GB.UTF-8;	export LC_ALL
+LANG=en_GB.UTF-8;		export LANG
+LC_ALL=en_GB.UTF-8;		export LC_ALL
 
 # set ENV to a file invoked each time sh is started for interactive use.
 ENV=$HOME/.shrc; export ENV
