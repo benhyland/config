@@ -3,10 +3,12 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Util.EZConfig
 import XMonad.Layout.LayoutModifier
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run
 
-main = myIOConfig >>= xmonad
-
-myIOConfig = myLeftDzen (myConfig `additionalKeys` myKeys) >>= myRightDzen
+main = do
+	status <- spawnPipe statusCommand
+	config <- myLeftDzen (myConfig `additionalKeys` myKeys)
+	xmonad $ config
 
 myConfig = defaultConfig
 	{
@@ -33,7 +35,7 @@ myMainColour = "#324c80"
 myHighlightColour = "#f06f06"
 
 toggleStatusKey :: XConfig t -> (KeyMask, KeySym)
-toggleStatusKey conf = (myModMask, xK_b)
+toggleStatusKey conf = (myModMask .|. shiftMask, xK_b)
 
 dzenBaseCommand = "dzen2 -e 'onstart=lower' -fg black -bg '" ++ myMainColour ++ "'"
 
@@ -45,4 +47,4 @@ myDzenPP = dzenPP
 	}
 
 myLeftDzen conf = statusBar (dzenBaseCommand ++ " -ta l -x 0 -w 500")  myDzenPP toggleStatusKey conf
-myRightDzen conf = statusBar ("conky -c ~/.conkyrc | " ++ dzenBaseCommand ++ " -ta r -x 500 -w 524") defaultPP toggleStatusKey conf
+statusCommand = "conky -c ~/.conkyrc | " ++ dzenBaseCommand ++ " -ta r -x 500 -w 524"
