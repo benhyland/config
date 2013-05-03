@@ -1,14 +1,14 @@
 #!/bin/sh
 
-HOME=/home/bh
+. ./interestingfiles
 
-diff .Xresources	$HOME/.Xresources
-diff .bashrc		$HOME/.bashrc
-diff .conkyrc		$HOME/.conkyrc
-diff .profile		$HOME/.profile
-diff .vimrc		$HOME/.vimrc
-diff .xsession		$HOME/.xsession
-diff rc.conf		/etc/rc.conf
-diff ttys		/etc/ttys
-diff xmonad.hs		$HOME/.xmonad/xmonad.hs
-diff xorg.conf		/etc/X11/xorg.conf
+diffAgainstRoot() {
+	f=$1
+	DIFF=`diff $f '/'$f`
+	if [ -n "$DIFF" ]; then
+		echo $f ' vs ' '/'$f
+		echo $DIFF
+	fi
+}
+
+foreachInterestingFile diffAgainstRoot

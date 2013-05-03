@@ -8,7 +8,6 @@ set hlsearch
 set ruler
 
 set autoindent
-set pastetoggle=<F12>
 
 if has('mouse')
   set mouse=a
@@ -19,3 +18,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set noexpandtab
+
+noremap  <F11> :%retab!<return>
+inoremap <F11> <c-o>:%retab!<return>
+
+noremap  <F12> :w<return>
+inoremap <F12> <c-o>:w<return>

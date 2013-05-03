@@ -1,0 +1,10 @@
+#!/bin/sh
+
+FILES=`find . -type f -and \( -path "./home/*" -or -path "./etc/*" \)`
+
+foreachInterestingFile() {
+	for f in $FILES
+	do
+		$1 $f
+	done
+}
