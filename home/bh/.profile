@@ -13,7 +13,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$HO
 # serial line.
 # TERM=xterm; 	export TERM
 
-BLOCKSIZE=K;			export BLOCKSIZE
+BLOCKSIZE=K;		export BLOCKSIZE
 EDITOR=vim;			export EDITOR
 VISUAL=vim;			export VISUAL
 PAGER=less;			export PAGER
