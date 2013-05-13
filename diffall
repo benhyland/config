@@ -4,10 +4,9 @@
 
 diffAgainstRoot() {
 	f=$1
-	DIFF=`diff $f '/'$f`
-	if [ -n "$DIFF" ]; then
-		echo $f ' vs ' '/'$f
-		echo $DIFF
+	diff $f '/'$f
+	if [ $? != 0 ]; then
+		echo '^^^   ' $f ' vs ' '/'$f
 	fi
 }
 

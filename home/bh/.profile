@@ -21,5 +21,16 @@ JAVA_HOME=/usr/local/openjdk7;	export JAVA_HOME
 LANG=en_GB.UTF-8;		export LANG
 LC_ALL=en_GB.UTF-8;		export LC_ALL
 
+HISTCONTROL=ignoredups;	export HISTCONTROL
+shopt -s histappend
+PROMPT_COMMAND='history -a'
+
 # set ENV to a file invoked each time sh is started for interactive use.
 ENV=$HOME/.shrc; export ENV
+
+PS1="\u@\h:\# [\w] \$ "
+
+
+
+alias grep="grep --color=auto"
+alias env="env | sort"
