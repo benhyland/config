@@ -34,3 +34,4 @@ PS1="\u@\h:\# [\w] \$ "
 
 alias grep="grep --color=auto"
 alias env="env | sort"
+alias mkdirs="mkdir -p"
