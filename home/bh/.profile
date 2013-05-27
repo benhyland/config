@@ -36,3 +36,11 @@ alias grep="grep --color=auto"
 alias env="env | sort"
 alias mkdirs="mkdir -p"
 alias addload="dd if=/dev/zero of=/dev/null"
+
+
+alias epochSeconds="date -ju -r"
+alias epochMillis="epoch 1000"
+epoch() {
+	let "EPOCHSECS=$2 / $1"
+	epochSeconds "$EPOCHSECS"
+}
