@@ -26,9 +26,11 @@ myModMask = mod1Mask
 
 myKeys :: [((ButtonMask, KeySym), X ())]
 myKeys = [
-	((myModMask .|. shiftMask,	xK_l		), spawn "slock"),
-	((0,				xK_Print	), spawn "scrot -e 'mv $f ~/screenshots/'"),
-	((myModMask,			xK_q		), spawn "killall dzen2 && killall -9 conky && xmonad --recompile && xmonad --restart")
+	((myModMask .|. shiftMask,  xK_l        ), spawn "slock"),
+	((0,                        xK_Print    ), spawn "scrot -e 'mv $f ~/screenshots/'"),
+	((myModMask,                xK_q        ), spawn "killall dzen2 && killall -9 conky && xmonad --recompile && xmonad --restart"),
+    ((0,                        xK_F5       ), spawn "mixer vol -4"),
+    ((0,                        xK_F6       ), spawn "mixer vol +4")
 	 ]
 
 myMainColour = "#324c80"
