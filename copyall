@@ -4,6 +4,8 @@
 
 copyToRoot() {
 	f=$1
+	d=`dirname $f`
+	mkdir -p '/'$d
 	cp $f '/'$f
 }
 
