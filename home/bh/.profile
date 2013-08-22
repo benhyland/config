@@ -32,7 +32,6 @@ PS1="\u@\h:\# [\w] \$ "
 
 
 
-alias grep="grep --color=auto"
 alias env="env | sort"
 alias mkdirs="mkdir -p"
 alias addload="dd if=/dev/zero of=/dev/null"
@@ -44,3 +43,14 @@ epoch() {
 	let "EPOCHSECS=$2 / $1"
 	epochSeconds "$EPOCHSECS"
 }
+
+alias grep="sackOrGrep"
+sackOrGrep() {
+	if [[ -t 1 && -t 0 ]]; then
+		echo -e 'you mean \e[0;31msack\e[0m?'
+		sack "$@"
+		else
+		/usr/bin/grep --color=auto "$@"
+	fi
+}
+
