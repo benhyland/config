@@ -54,3 +54,10 @@ sackOrGrep() {
 	fi
 }
 
+mountPhone() {
+	sudo kldload /usr/local/modules/fuse.ko
+	sudo gphotofs /home/bh/phone
+}
+unmountPhone() {
+	sudo umount /home/bh/phone
+}
