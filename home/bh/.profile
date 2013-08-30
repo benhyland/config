@@ -28,7 +28,7 @@ PROMPT_COMMAND='history -a'
 # set ENV to a file invoked each time sh is started for interactive use.
 ENV=$HOME/.shrc; export ENV
 
-PS1="\u@\h:\# [\w] \$ "
+PS1="\u@\h:\! [\w] \$ "
 
 
 
