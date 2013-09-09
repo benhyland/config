@@ -35,7 +35,7 @@ PS1="\u@\h:\! [\w] \$ "
 alias env="env | sort"
 alias mkdirs="mkdir -p"
 alias addload="dd if=/dev/zero of=/dev/null"
-
+alias getsomesleepyoufool="sudo shutdown -p +30"
 
 alias epochSeconds="date -ju -r"
 alias epochMillis="epoch 1000"
