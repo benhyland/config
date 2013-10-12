@@ -31,7 +31,7 @@ ENV=$HOME/.shrc; export ENV
 PS1="\u@\h:\! [\w] \$ "
 
 
-
+alias restart="sudo reboot"
 alias env="env | sort"
 alias mkdirs="mkdir -p"
 alias addload="dd if=/dev/zero of=/dev/null"
