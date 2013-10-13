@@ -61,3 +61,9 @@ mountPhone() {
 unmountPhone() {
 	sudo umount /home/bh/phone
 }
+
+urldecode() {
+	local decoded_for_printf=$(echo "$@" | sed "s/+/ /g" | sed "s/%/\\\\x/g")
+    printf '%b' "$decoded_for_printf"
+}
+
