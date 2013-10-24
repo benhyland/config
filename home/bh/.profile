@@ -67,3 +67,6 @@ urldecode() {
     printf '%b' "$decoded_for_printf"
 }
 
+cmain() {
+	echo -e "\n\nint\nmain(int argc, char *argv[])\n{\n\t\n}\n" > $1
+}
