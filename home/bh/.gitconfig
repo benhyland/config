@@ -1,0 +1,10 @@
+[user]
+	name = Ben Hyland
+	email = mail@bhyland.co.uk
+[credential]
+	helper = gnome-keyring
+[push]
+	default = simple
+[core]
+	autocrlf = input
+
