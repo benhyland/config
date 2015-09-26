@@ -1,7 +1,0 @@
-[user]
-	name = Ben Hyland
-	email = mail@bhyland.co.uk
-[credential]
-	helper = cache
-[push]
-	default = simple

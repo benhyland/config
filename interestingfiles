@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILES=`find . -type f -and \( -path "./home/*" -or -path "./etc/*" \) -and -not -path "*/.svn/*"`
+FILES=$(find . -type f -and -path "./home/*")
 
 foreachInterestingFile() {
 	for f in $FILES
