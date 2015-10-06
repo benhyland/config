@@ -15,6 +15,8 @@ alias mkdirs="mkdir -p"
 alias ll="ls -al"
 alias ssh="ssh -A"
 
+alias ndf="dnf"
+
 alias getsomesleepyoufool="sudo shutdown -p +30"
 
 alias usegit="find -path './.idea/vcs.xml' -exec sed -i 's/vcs=\"svn\"/vcs=\"Git\"/' '{}' \; ; find . -maxdepth 1 -name \"*.ipr\" -exec sed -i 's/vcs=\"svn\"/vcs=\"Git\"/' '{}' \;"
